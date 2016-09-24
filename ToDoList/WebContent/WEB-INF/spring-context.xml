@@ -12,19 +12,21 @@
 	http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
-	<!-- pacote base do programa -->
-	<context:component-scan base-package="br.senai.sp.informatica.tofolist" />
+	<!-- pacote base do programa, necessário especificar isto para que o spring 
+		reconheça -->
+	<context:component-scan base-package="br.senai.sp.informatica.todolist" />
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven />
 
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<!--  local e nome do banco de dados  -->
-		<property name="url" value="jdbc:mysql://localhost:3306/todolist2" />
+		<!-- local e nome do banco de dados -->
+		<property name="url" value="jdbc:mysql://localhost:3306/ToDoList" />
 		<property name="username" value="root" />
 		<property name="password" value="root" />
 	</bean>
 
+	<!-- Controla o que vai ser salvo no banco, formatando para o formato do SQL de forma automatica -->
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="mysqlDataSource" />
@@ -33,6 +35,8 @@
 		</property>
 	</bean>
 
+	<!-- Aqui é especificado que o spring vai controlar as transações, para 
+		que eu não tenha que fazer isto -->
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>

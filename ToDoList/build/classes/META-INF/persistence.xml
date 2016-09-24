@@ -8,9 +8,13 @@
 
 		<properties>
 			<!-- propriedades do Hibernate -->
+			<!-- Define em qual linguagem ele vai conversar, de acordo com o Database que você conectou -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<!-- Mostra os códigos SQL no console -->
 			<property name="hibernate.show_sql" value="true" />
+			<!-- Dados formatados para o formato do SQL, de preferencia deixe como true -->
 			<property name="hibernate.format_sql" value="true" />
+			<!--  -->
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
 	</persistence-unit>
