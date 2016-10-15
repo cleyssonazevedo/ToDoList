@@ -1,0 +1,11 @@
+package br.senai.sp.todolist.model;
+
+import java.util.List;
+
+public class Terefa {
+
+	private Long id;
+	private String titulo;
+	private List<ItemTarefa> itens;
+	
+}

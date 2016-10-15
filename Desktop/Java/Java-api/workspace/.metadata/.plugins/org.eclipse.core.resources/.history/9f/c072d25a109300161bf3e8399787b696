@@ -1,0 +1,9 @@
+package br.senai.sp.todolist.model;
+
+public class ItemTarefa {
+	private Long id;
+	private String descricao;
+	private boolean feito;
+	private Tarefa tarefa;
+	
+}

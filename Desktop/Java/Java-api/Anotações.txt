@@ -1,0 +1,28 @@
+REST = Representational state transfer
+
+{ Modelo convencional } = tudo na aplicação e conectado diretamente com o banco de dados
+
+{ Modelo Rest } = API conecta com o banco de dados e toda regra de negocio esta nesta API.
+
+{ padrão HTTP e HTTPS }
+
+create = POST
+
+read = GET
+ 
+update = PUT
+
+delete = DELETE
+
+{ Recursos } = Meio pelo qual as funções da API são acessadas 
+
+{ JSON } 
+
+{
+"chave":"valor",
+"chave2":"valor2",
+}
+
+java.util.List = colection do Java ( pesquisar )
+
+URI vs URL qual a diferença (Pesquisar)
